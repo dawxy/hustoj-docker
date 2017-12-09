@@ -5,8 +5,8 @@ apt-get install -y subversion
 cd /home/judge/
 svn co https://github.com/zhblue/hustoj/trunk/trunk/  src
 apt-get install -y make flex g++ clang libmysqlclient-dev libmysql++-dev php-fpm nginx mysql-server php-mysql php-gd php-zip fp-compiler openjdk-8-jdk mono-devel php-mbstring php-xml
-USER=`cat /etc/mysql/debian.cnf |grep user|head -1|awk  '{print $3}'`
-PASSWORD=`cat /etc/mysql/debian.cnf |grep password|head -1|awk  '{print $3}'`
+USER=`root`
+PASSWORD=`xy950328`
 mkdir etc data log
 
 cp src/install/java0.policy  /home/judge/etc
