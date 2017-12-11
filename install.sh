@@ -33,8 +33,8 @@ else
 	sed -i "s:include /etc/nginx/mime.types;:client_max_body_size    80m;\n\tinclude /etc/nginx/mime.types;:g" /etc/nginx/nginx.conf
 fi
 
-mysql -h localhost -u$USER -p$PASSWORD < src/install/db.sql
-echo "insert into jol.privilege values('admin','administrator','N');"|mysql -h localhost -u$USER -p$PASSWORD 
+#mysql -h localhost -u$USER -p$PASSWORD < src/install/db.sql
+#echo "insert into jol.privilege values('admin','administrator','N');"|mysql -h localhost -u$USER -p$PASSWORD 
 
 sed -i "s:root /var/www/html;:root /home/judge/src/web;:g" /etc/nginx/sites-enabled/default
 sed -i "s:index index.html:index index.php:g" /etc/nginx/sites-enabled/default
